@@ -1,30 +1,30 @@
-#define _USE_MATH_DEFINES // for C++
+п»ї#define _USE_MATH_DEFINES // for C++
 #include <cmath>
 #include <iostream>
 
 using namespace std;
 
 /**
-* \brief Расчет а по заданной формуле
-* \param x Первый аргумент функции
-* \param y Второй аргумент функции
-* \param z Третий аргумент функции
-* \return значение а
+* \brief Р Р°СЃС‡РµС‚ Р° РїРѕ Р·Р°РґР°РЅРЅРѕР№ С„РѕСЂРјСѓР»Рµ
+* \param x РџРµСЂРІС‹Р№ Р°СЂРіСѓРјРµРЅС‚ С„СѓРЅРєС†РёРё
+* \param y Р’С‚РѕСЂРѕР№ Р°СЂРіСѓРјРµРЅС‚ С„СѓРЅРєС†РёРё
+* \param z РўСЂРµС‚РёР№ Р°СЂРіСѓРјРµРЅС‚ С„СѓРЅРєС†РёРё
+* \return Р·РЅР°С‡РµРЅРёРµ Р°
 */
 double get_a(const double x, const double y, const double z);
 
 /**
-* \brief Расчет b по заданной формуле
-* \param x Первый аргумент функции
-* \param y Второй аргумент функции
-* \param z Третий аргумент функции
-* \return значение b
+* \brief Р Р°СЃС‡РµС‚ b РїРѕ Р·Р°РґР°РЅРЅРѕР№ С„РѕСЂРјСѓР»Рµ
+* \param x РџРµСЂРІС‹Р№ Р°СЂРіСѓРјРµРЅС‚ С„СѓРЅРєС†РёРё
+* \param y Р’С‚РѕСЂРѕР№ Р°СЂРіСѓРјРµРЅС‚ С„СѓРЅРєС†РёРё
+* \param z РўСЂРµС‚РёР№ Р°СЂРіСѓРјРµРЅС‚ С„СѓРЅРєС†РёРё
+* \return Р·РЅР°С‡РµРЅРёРµ b
 */
 double get_b(const double x, const double y, const double z);
 
 /**
-* \brief Вхождение в программу
-* \return Возвращает 0 в случае успеха
+* \brief Р’С…РѕР¶РґРµРЅРёРµ РІ РїСЂРѕРіСЂР°РјРјСѓ
+* \return Р’РѕР·РІСЂР°С‰Р°РµС‚ 0 РІ СЃР»СѓС‡Р°Рµ СѓСЃРїРµС…Р°
 */
 int main()
 {
@@ -48,5 +48,5 @@ double get_a(const double x, const double y, const double z)
 
 double get_b(const double x, const double y, const double z)
 {
-	return z * pow(M_E, -sqrt(z)) * cos(y * x / z);
+	return z * exp(-sqrt(z)) * cos(y * x / z);
 }
