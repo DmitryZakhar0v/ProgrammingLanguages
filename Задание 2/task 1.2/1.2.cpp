@@ -8,7 +8,7 @@ using namespace std;
 * \param width Второй аргумент функции
 * \return значение аrea
 */
-const double get_area(const double length, const double width);
+double get_area(const double length, const double width);
 
 /**
 * \brief Расчет triangle_аrea по заданной формуле
@@ -17,7 +17,7 @@ const double get_area(const double length, const double width);
 * \param c - третья сторона треугольника
 * \return значение treangle_аrea
 */
-const double get_triangle_area(const double a, const double b, const double c);
+double get_triangle_area(const double a, const double b, const double c);
 
 int main()
 {
@@ -43,12 +43,12 @@ int main()
     return 0;
 }
 
-const double get_area(const double length, const double width)
+double get_area(const double length, const double width)
 {
     return length * width;
 }
 
-const double get_triangle_area(const double a, const double b, const double c)
+double get_triangle_area(const double a, const double b, const double c)
 {
     return sqrt(((a + b + c) / 2) * (((a + b + c) / 2) - a) * (((a + b + c) / 2) - b) * (((a + b + c) / 2) - c));
 }
