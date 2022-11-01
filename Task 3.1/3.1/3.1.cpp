@@ -7,7 +7,7 @@ using namespace std;
 * \param x - аргумент функции
 * \return Возвращает значение y 
 */
-double getY (double x);
+double getY (const double x);
 
 /**
 * \brief Определяет параметр табуляции
@@ -15,13 +15,6 @@ double getY (double x);
 * \return Параметр табуляции
 */
 double getValues(const string& message);
-
-/**
-* \brief Функция, определяющая существование функции в данной точке
-* \param x - аргумент функции
-* \return Возвращает true если существует, false если не существует
-*/
-bool isExists(double x);
 
 /**
 * \brief Точка входа в программу
@@ -37,21 +30,13 @@ int main()
 	
 	for (min; min <= max; min += step)
 	{
-		if (isExists(min))
-		{
-			double y = getY(min);
-			cout << "x = " << min << "\n" << "y = " << y << "\n" << endl;
-		}
-		else
-		{
-			cout << "Функция не определена" << endl;
-			return 1;
-		}
+		double y = getY(min);
+		cout << "x = " << min << "\n" << "y = " << y << "\n" << endl;
 	}
 	return 0;
 }
 
-double getY(double x)
+double getY(const double x)
 {
 	return (x - ((1) / (3 + sin(3.6 * x))));
 }
@@ -62,16 +47,4 @@ double getValues(const string& message)
 	double value = 0.0;
 	cin >> value;
 	return value;
-}
-
-bool isExists(double x)
-{
-	if ((3 + sin(3.6 * x)) != 0)
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
 }
