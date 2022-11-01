@@ -162,15 +162,13 @@ int main()
 
         deleteArray(array, row);
         deleteArray(task1Array, row);
-        deleteArray(task2Array, row);
-        
+        deleteArray(task2Array, row);  
     }
-    catch (const std::exception& errors)
+    catch (const std::exception& error)
     {
-        throw exception{};
-        cout << errors.what();
+        cout << error.what();
     }
-
+    return 0;
 }
 
 size_t getSize(const string& message)
